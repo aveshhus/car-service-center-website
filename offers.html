@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Saving Offers - Alpha Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .timer-container {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 30px rgba(255, 75, 43, 0.4);
+        }
+
+        .timer-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .time-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+
+        .time-val {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .time-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .offer-card {
+            background: white;
+            color: #333;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .offer-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff416c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .offer-img {
+            height: 200px;
+            background: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #666;
+            font-size: 1.2rem;
+        }
+
+        .offer-details {
+            padding: 20px;
+        }
+
+        .offer-price {
+            font-size: 1.5rem;
+            color: #ff4b2b;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body class="sub-page-body">
+
+    <!-- Header -->
+    <header class="sub-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="Media/logo.png" alt="Alpha Motors Logo" class="logo">
+            </a>
+        </div>
+        <button id="menuToggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="insurance.html" class="nav-link">Insurance</a>
+            <a href="detailing.html" class="nav-link">Detailing</a>
+            <a href="offers.html" class="nav-link active">Offers</a>
+            <a href="used_cars.html" class="nav-link">Used Cars</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero" style="background-image: url('Media/offers-hero.jpg');">
+        <h1>Big Saving Offers</h1>
+        <p>Exclusive deals and seasonal discounts</p>
+    </section>
+
+    <div class="container">
+        <!-- Countdown Timer -->
+        <div class="timer-container">
+            <h2 class="timer-title">Monsoon Madness Sale Ends In</h2>
+            <div class="countdown" id="countdown">
+                <div class="time-box">
+                    <span class="time-val" id="days">00</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-val" id="hours">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-val" id="minutes">00</span>
+                    <span class="time-label">Mins</span>
+                </div>
+                <div class="time-box">
+                    <span class="time-val" id="seconds">00</span>
+                    <span class="time-label">Secs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Offers List -->
+        <div class="section-title">
+            <h2>Active Offers</h2>
+            <span></span>
+        </div>
+
+        <div class="offer-grid">
+            <!-- Offer 1 -->
+            <div class="offer-card">
+                <div class="offer-badge">50% OFF</div>
+                <div class="offer-img">Combo Package Image</div>
+                <div class="offer-details">
+                    <h3>Full Service + Interior Cleaning</h3>
+                    <div class="offer-price">₹1999 <span
+                            style="text-decoration: line-through; color: #999; font-size: 1rem;">₹3999</span></div>
+                    <p>Get a complete car service along with premium interior vacuuming and polishing.</p>
+                    <a href="#" class="cta-btn"
+                        style="margin-top: 15px; display: block; text-align: center; font-size: 1rem;">Claim Offer</a>
+                </div>
+            </div>
+
+            <!-- Offer 2 -->
+            <div class="offer-card">
+                <div class="offer-badge">FREE</div>
+                <div class="offer-img">Wheel Awareness Image</div>
+                <div class="offer-details">
+                    <h3>Free Wheel Alignment</h3>
+                    <div class="offer-price">₹0 <span
+                            style="text-decoration: line-through; color: #999; font-size: 1rem;">₹450</span></div>
+                    <p>Free wheel alignment with every Synthetic Oil Change package.</p>
+                    <a href="#" class="cta-btn"
+                        style="margin-top: 15px; display: block; text-align: center; font-size: 1rem;">Claim Offer</a>
+                </div>
+            </div>
+            <!-- Offer 3 -->
+            <div class="offer-card">
+                <div class="offer-badge">FESTIVE</div>
+                <div class="offer-img">Ceramic Coating Image</div>
+                <div class="offer-details">
+                    <h3>Ceramic Coating Flat 20% Off</h3>
+                    <div class="offer-price">Starting @ ₹9999</div>
+                    <p>Upgrade your car's shine this festive season with our premium 9H ceramic coating.</p>
+                    <a href="#" class="cta-btn"
+                        style="margin-top: 15px; display: block; text-align: center; font-size: 1rem;">Claim Offer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Buttons (Shared) -->
+    <div class="floating-buttons">
+        <a href="mailto:info@alphamotors.com" class="floating-btn floating-mail-btn" title="Email Us">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/9549652225" class="floating-btn floating-whatsapp-btn" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+9549652225" class="floating-btn floating-call-btn" title="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Used Cars - Alpha Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="sub-page-body">
+
+    <!-- Header -->
+    <header class="sub-header">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="Media/logo.png" alt="Alpha Motors Logo" class="logo">
+            </a>
+        </div>
+        <button id="menuToggle" class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="insurance.html" class="nav-link">Insurance</a>
+            <a href="detailing.html" class="nav-link">Detailing</a>
+            <a href="offers.html" class="nav-link">Offers</a>
+            <a href="used_cars.html" class="nav-link active">Used Cars</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero" style="background-image: url('Media/used_cars_bg.png');">
+        <h1>Find Your Dream Car</h1>
+        <p>Expertly Inspected, Certified Used Cars at Unbeatable Prices</p>
+    </section>
+
+    <div class="container">
+        <!-- Filter Bar -->
+        <div class="cars-filter-bar">
+            <div class="filter-group">
+                <label>Car Brand</label>
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="Maruti Suzuki">Maruti Suzuki</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Mahindra">Mahindra</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Budget Range</label>
+                <select id="priceFilter">
+                    <option value="all">Any Price</option>
+                    <option value="below-5">Below 5 Lakhs</option>
+                    <option value="5-10">5L - 10L</option>
+                    <option value="10-20">10L - 20L</option>
+                    <option value="above-20">Above 20L</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Body Type</label>
+                <select id="typeFilter">
+                    <option value="all">All Types</option>
+                    <option value="Hatchback">Hatchback</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="SUV">SUV</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Search Car</label>
+                <input type="text" id="searchInput" placeholder="e.g. Swift, Creta...">
+            </div>
+            <button class="cta-btn" id="searchBtn" style="padding: 12px 30px; margin-top: 25px;">Search</button>
+        </div>
+
+        <!-- Available Cars Grid -->
+        <div class="section-title">
+            <h2>Featured Inventory</h2>
+            <span></span>
+        </div>
+
+        <div class="services-grid" id="carsGrid" style="margin-bottom: 80px;">
+            <!-- Car 1 -->
+            <div class="car-card" data-brand="Maruti Suzuki" data-price="545000" data-type="Hatchback"
+                data-name="Swift">
+                <div class="car-image-container">
+                    <div class="car-badge">Certified</div>
+                    <img src="Media/swift_used.png" alt="Maruti Suzuki Swift">
+                </div>
+                <div class="car-info">
+                    <h3>Maruti Suzuki Swift VXI</h3>
+                    <div class="car-price">₹5,45,000</div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fa-solid fa-calendar"></i> 2020</div>
+                        <div class="spec-item"><i class="fa-solid fa-gauge-high"></i> 28,500 KM</div>
+                        <div class="spec-item"><i class="fa-solid fa-gas-pump"></i> Petrol</div>
+                        <div class="spec-item"><i class="fa-solid fa-gears"></i> Manual</div>
+                    </div>
+                    <div class="car-actions">
+                        <a href="contact.html" class="action-btn primary-action">Enquire Now</a>
+                        <a href="contact.html" class="action-btn secondary-action">Test Drive</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card" data-brand="Hyundai" data-price="1490000" data-type="SUV" data-name="Creta">
+                <div class="car-image-container">
+                    <div class="car-badge">Under Warranty</div>
+                    <img src="Media/creta_used.png" alt="Hyundai Creta">
+                </div>
+                <div class="car-info">
+                    <h3>Hyundai Creta SX (O)</h3>
+                    <div class="car-price">₹14,90,000</div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fa-solid fa-calendar"></i> 2022</div>
+                        <div class="spec-item"><i class="fa-solid fa-gauge-high"></i> 12,200 KM</div>
+                        <div class="spec-item"><i class="fa-solid fa-gas-pump"></i> Diesel</div>
+                        <div class="spec-item"><i class="fa-solid fa-gears"></i> Automatic</div>
+                    </div>
+                    <div class="car-actions">
+                        <a href="contact.html" class="action-btn primary-action">Enquire Now</a>
+                        <a href="contact.html" class="action-btn secondary-action">Test Drive</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card" data-brand="Honda" data-price="1025000" data-type="Sedan" data-name="City">
+                <div class="car-image-container">
+                    <div class="car-badge">Low Mileage</div>
+                    <img src="Media/city_used.png" alt="Honda City">
+                </div>
+                <div class="car-info">
+                    <h3>Honda City ZX CVT</h3>
+                    <div class="car-price">₹10,25,000</div>
+                    <div class="car-specs">
+                        <div class="spec-item"><i class="fa-solid fa-calendar"></i> 2019</div>
+                        <div class="spec-item"><i class="fa-solid fa-gauge-high"></i> 34,000 KM</div>
+                        <div class="spec-item"><i class="fa-solid fa-gas-pump"></i> Petrol</div>
+                        <div class="spec-item"><i class="fa-solid fa-gears"></i> Automatic</div>
+                    </div>
+                    <div class="car-actions">
+                        <a href="contact.html" class="action-btn primary-action">Enquire Now</a>
+                        <a href="contact.html" class="action-btn secondary-action">Test Drive</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const brandFilter = document.getElementById('brandFilter');
+                const priceFilter = document.getElementById('priceFilter');
+                const typeFilter = document.getElementById('typeFilter');
+                const searchInput = document.getElementById('searchInput');
+                const searchBtn = document.getElementById('searchBtn');
+                const carCards = document.querySelectorAll('.car-card');
+
+                function filterCars() {
+                    const brand = brandFilter.value;
+                    const priceRange = priceFilter.value;
+                    const type = typeFilter.value;
+                    const query = searchInput.value.toLowerCase();
+
+                    carCards.forEach(card => {
+                        const cardBrand = card.dataset.brand;
+                        const cardPrice = parseInt(card.dataset.price);
+                        const cardType = card.dataset.type;
+                        const cardName = card.dataset.name.toLowerCase();
+
+                        let show = true;
+
+                        if (brand !== 'all' && cardBrand !== brand) show = false;
+                        if (type !== 'all' && cardType !== type) show = false;
+                        if (query && !cardName.includes(query)) show = false;
+
+                        if (priceRange !== 'all') {
+                            if (priceRange === 'below-5' && cardPrice >= 500000) show = false;
+                            if (priceRange === '5-10' && (cardPrice < 500000 || cardPrice > 1000000)) show = false;
+                            if (priceRange === '10-20' && (cardPrice < 1000000 || cardPrice > 2000000)) show = false;
+                            if (priceRange === 'above-20' && cardPrice <= 2000000) show = false;
+                        }
+
+                        card.style.display = show ? 'flex' : 'none';
+                    });
+                }
+
+                brandFilter.addEventListener('change', filterCars);
+                priceFilter.addEventListener('change', filterCars);
+                typeFilter.addEventListener('change', filterCars);
+                searchBtn.addEventListener('click', filterCars);
+                searchInput.addEventListener('keyup', function (e) {
+                    if (e.key === 'Enter') filterCars();
+                });
+            });
+        </script>
+
+        <!-- Trust Section -->
+        <div class="trust-section" style="margin-bottom: 80px;">
+            <div class="section-title">
+                <h2>The Alpha Advantage</h2>
+                <span></span>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <h4>120+ Point Inspection</h4>
+                    <p>Every car undergoes a rigorous mechanical and structural check by our experts.</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-file-shield"></i>
+                    <h4>Clear Documentation</h4>
+                    <p>Hassle-free RC transfer and clean service history guaranteed for every vehicle.</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h4>Best Value Price</h4>
+                    <p>Fair pricing based on market data, ensuring you get the best deal without haggling.</p>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Warranty Support</h4>
+                    <p>Optional extended warranty coverage for complete peace of mind on your purchase.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sell Your Car CTA -->
+        <section
+            style="background: linear-gradient(135deg, rgba(0, 210, 255, 0.1), rgba(58, 123, 213, 0.1)); padding: 60px; border-radius: 30px; text-align: center; border: 1px solid var(--glass-border); margin-bottom: 80px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Want to Sell Your Car?</h2>
+            <p
+                style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Get the best market value for your vehicle with our instant valuation and transparent process. We buy
+                cars of all brands.</p>
+            <a href="contact.html" class="cta-btn" style="padding: 15px 40px;">Get Instant Valuation</a>
+        </section>
+
+    </div>
+
+    <!-- Floating Buttons (Shared) -->
+    <div class="floating-buttons">
+        <a href="mailto:info@alphamotors.com" class="floating-btn floating-mail-btn" title="Email Us">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/9636705918" class="floating-btn floating-whatsapp-btn" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:9636705918" class="floating-btn floating-call-btn" title="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
