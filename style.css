@@ -1127,21 +1127,150 @@ button.floating-call-btn {
     z-index: 1;
 }
 
-/* Background Image assignments */
+/* Background Image assignments & Unique Gradients */
+.bg-workshop {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(0, 100, 255, 0.05)) !important;
+}
 .bg-workshop::before {
     background-image: url('Media/workshop_3.png');
 }
 
+.bg-detailing {
+    background: linear-gradient(135deg, rgba(123, 31, 162, 0.15), rgba(0, 188, 212, 0.05)) !important;
+}
 .bg-detailing::before {
     background-image: url('Media/detailing_bg.jpg');
 }
 
+.bg-quality {
+    background: linear-gradient(135deg, rgba(0, 150, 136, 0.15), rgba(0, 230, 118, 0.05)) !important;
+}
 .bg-quality::before {
     background-image: url('Media/support_team.jpg');
 }
 
+.bg-convenience {
+    background: linear-gradient(135deg, rgba(63, 81, 181, 0.15), rgba(3, 169, 244, 0.05)) !important;
+}
 .bg-convenience::before {
     background-image: url('Media/workshop_4.png');
+}
+
+/* Expertise Section Styles (Precise Live Site Match) */
+.expertise-section {
+    padding: 120px 5%;
+    margin-top: 100px;
+    background: linear-gradient(rgba(12, 14, 46, 0.82), rgba(12, 14, 46, 0.82)), url('Media/Mainbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.expertise-header {
+    margin-bottom: 80px;
+}
+
+.expertise-header h2 {
+    font-size: 4rem; /* Matching the large scale on live site */
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.expertise-header .underline {
+    width: 65px;
+    height: 5px;
+    background: #00d2ff;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.expertise-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 50px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(8px);
+    height: 100%;
+}
+
+.expertise-card h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.expertise-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #00d2ff;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.expertise-footer {
+    margin-top: 100px;
+}
+
+.menu-btn {
+    display: inline-block;
+    padding: 18px 45px;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.05rem;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.3);
+}
+
+.menu-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.5);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 1200px) {
+    .expertise-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .expertise-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .bento-item:hover {
