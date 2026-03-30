@@ -1073,7 +1073,7 @@ button.floating-call-btn {
 
 @media (min-width: 1200px) {
     .bento-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     }
 }
 
@@ -1087,7 +1087,7 @@ button.floating-call-btn {
 .bento-item {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
     border: 1px solid var(--glass-border);
-    padding: 50px 40px;
+    padding: 40px 25px;
     border-radius: 30px;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
@@ -1095,6 +1095,51 @@ button.floating-call-btn {
     align-items: center;
     text-align: center;
     position: relative;
+    overflow: hidden;
+}
+
+/* Why Choose Us Hover Images */
+.bento-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 0;
+    border-radius: inherit;
+    filter: brightness(0.8) contrast(1.2);
+}
+
+.bento-item:hover::before {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.bento-item > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Background Image assignments */
+.bg-workshop::before {
+    background-image: url('Media/workshop_3.png');
+}
+
+.bg-detailing::before {
+    background-image: url('Media/detailing_bg.jpg');
+}
+
+.bg-quality::before {
+    background-image: url('Media/support_team.jpg');
+}
+
+.bg-convenience::before {
+    background-image: url('Media/workshop_4.png');
 }
 
 .bento-item:hover {
@@ -1117,7 +1162,7 @@ button.floating-call-btn {
 }
 
 .bento-item h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 20px;
     color: #fff;
     font-weight: 700;
