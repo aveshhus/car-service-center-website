@@ -3,7 +3,7 @@
 
 const CONTACT = {
     phones: ["9549652225", "9694833000", "9694822000", "09521202120"],
-    email: "info@alphamotors.com",
+    email: "info@Alfamotors.com",
     whatsapp: "9549652225",
     location: "109, Gajsinghpur, Jaipur, Rajasthan 302021",
     hours: "Mon-Sat: 9AM-7PM | Sun: 10AM-5PM"
