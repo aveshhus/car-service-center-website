@@ -1172,6 +1172,37 @@ button.floating-call-btn {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 30px;
+    margin-top: auto;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+    border: 1px solid transparent;
+}
+
+.card-cta:hover {
+    background: #fff;
+    color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+.card-cta i {
+    font-size: 1rem;
 }
 
 .award-container {
