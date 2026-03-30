@@ -884,7 +884,7 @@ button.floating-call-btn {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 100px;
 }
 
