@@ -1338,6 +1338,114 @@ button.floating-call-btn {
     margin-top: 15px;
 }
 
+/* Legacy Gallery Specific Enhancements */
+.legacy-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 20px;
+}
+
+.legacy-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.legacy-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.8s ease;
+    filter: brightness(0.7) contrast(1.1);
+}
+
+.legacy-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 12, 41, 0.9), transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    transition: all 0.5s ease;
+}
+
+.legacy-overlay h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.legacy-overlay p {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s 0.1s ease;
+}
+
+.legacy-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 210, 255, 0.4);
+    z-index: 2;
+}
+
+.legacy-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.9) contrast(1.2);
+}
+
+.legacy-item:hover .legacy-overlay {
+    background: linear-gradient(to top, rgba(0, 210, 255, 0.4), transparent 80%);
+}
+
+.legacy-item:hover .legacy-overlay h3 {
+    transform: translateY(0);
+}
+
+.legacy-item:hover .legacy-overlay p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Grid Layout */
+.legacy-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.legacy-item.wide {
+    grid-column: span 2;
+}
+
+.legacy-item.tall {
+    grid-row: span 2;
+}
+
+@media (max-width: 1024px) {
+    .legacy-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .legacy-item.large, .legacy-item.wide, .legacy-item.tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .legacy-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card-cta {
     display: inline-flex;
     align-items: center;
